@@ -1,0 +1,106 @@
+# 通用忽略规则
+# 操作系统生成的文件
+.DS_Store               # macOS
+Thumbs.db               # Windows
+ehthumbs.db             # Windows
+.DS_Store?              # macOS
+._*                     # macOS
+.Spotlight-V100         # macOS
+.Trashes                # macOS
+*.swp                   # Vim临时文件
+*.swo                   # Vim临时文件
+*~                      # 临时文件
+
+# 编辑器/IDE配置文件
+.idea/                  # IntelliJ IDEA
+.vscode/                # VS Code
+*.suo                   # Visual Studio
+*.ntvs*                 # Visual Studio
+*.njsproj               # Visual Studio
+*.sln                   # Visual Studio
+*.swp                   # Vi/Vim
+*.swo                   # Vi/Vim
+.apt_generated          # Eclipse
+.classpath              # Eclipse
+.factorypath            # Eclipse
+.project                # Eclipse
+.settings/              # Eclipse
+bin/                    # Eclipse/IntelliJ等编译输出
+build/                  # 构建目录
+out/                    # IntelliJ输出目录
+logs/                   # 日志目录
+
+# Java相关
+*.class                 # Java编译文件
+*.jar                   # Java打包文件
+*.war                   # Web应用打包文件
+*.ear                   # 企业应用打包文件
+*.jmod                  # Java模块文件
+*.smod                  # Java模块文件
+hs_err_pid*             # JVM错误日志
+replay_pid*             # JVM回放日志
+target/                 # Maven/Gradle构建目录
+!.mvn/wrapper/maven-wrapper.jar  # 保留Maven包装器
+!**/src/main/**/target/          # 特殊情况保留
+!**/src/test/**/target/          # 特殊情况保留
+
+# 前端相关
+node_modules/           # Node依赖
+npm-debug.log*          # NPM错误日志
+yarn-debug.log*         # Yarn错误日志
+yarn-error.log*         # Yarn错误日志
+.pnpm-debug.log*        # PNPM错误日志
+coverage/               # 测试覆盖率报告
+dist/                   # 打包输出目录
+build/                  # 构建目录
+*.local                 # 本地环境文件
+.env*.local             # 本地环境变量（不含.env示例文件）
+!.env.example           # 保留环境变量示例
+!.env.test              # 保留测试环境变量
+
+# Python相关
+__pycache__/            # Python字节码缓存
+*.py[cod]               # Python编译文件
+*$py.class              # Python类文件
+*.so                    # Python扩展模块
+.Python                 # Python虚拟环境
+env/                    # 虚拟环境
+build/                  # 构建目录
+develop-eggs/           # 开发egg文件
+dist/                   # 分发目录
+downloads/              # 下载文件
+eggs/                   # egg文件
+.eggs/                  # egg缓存
+lib/                    # 库目录
+lib64/                  # 64位库目录
+parts/                  # 部分文件
+sdist/                  # 源码分发
+var/                    # 变量目录
+wheels/                 # wheel文件
+*.egg-info/             # egg信息
+.installed.cfg          # 安装配置
+*.egg                   # egg文件
+venv/                   # 虚拟环境
+ENV/                    # 环境目录
+
+# 数据库相关
+*.sql                   # SQL文件（如果包含敏感数据）
+*.sqlite                # SQLite数据库
+*.sqlite3               # SQLite3数据库
+*.db                    # 数据库文件
+*.db-journal            # 数据库日志
+
+# 压缩文件
+*.tar.gz                # GZ压缩包
+*.tar.bz2               # BZ2压缩包
+*.tar.xz                # XZ压缩包
+*.zip                   # ZIP压缩包
+*.7z                    # 7Z压缩包
+*.rar                   # RAR压缩包
+
+# 其他常见忽略
+*.log                   # 日志文件
+*.tmp                   # 临时文件
+*.bak                   # 备份文件
+*.old                   # 旧文件
+.DS_Store               # macOS文件管理器配置
