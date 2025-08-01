@@ -3,6 +3,7 @@ package SwingComp;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.File;
 
 
 public class FileChooserDemo implements ActionListener {
@@ -50,6 +51,22 @@ public class FileChooserDemo implements ActionListener {
         JButton button = (JButton) e.getSource();
         if (button == openBtn) {
             int select = fc.showOpenDialog(frame);
+            if (select == JFileChooser.APPROVE_OPTION) {
+                File file = fc.getSelectedFile();
+                tf.setText("Opening: " + file.getName());
+            } else {
+                tf.setText("Open command canceled by user");
+            }
+        } else if (button == saveBtn) {
+            int select = fc.showSaveDialog(frame);
+            if (select == JFileChooser.APPROVE_OPTION) {
+                File file = fc.getSelectedFile();
+                tf.setText("Saving: " + file.getName());
+            } else {
+                tf.setText("Save command canceled by user");
+            }
+        } else if (button == delBtn) {
+            int select = fc.showDialog(frame, "删除");
         }
     }
 }
