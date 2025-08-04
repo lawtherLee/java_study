@@ -67,6 +67,12 @@ public class FileChooserDemo implements ActionListener {
             }
         } else if (button == delBtn) {
             int select = fc.showDialog(frame, "删除");
+            if (select == JFileChooser.APPROVE_OPTION) {
+                File file = fc.getSelectedFile();
+                tf.setText("Deleting: " + file.getName());
+            } else {
+                tf.setText("Delete command canceled by user");
+            }
         }
     }
 }
